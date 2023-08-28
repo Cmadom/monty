@@ -34,7 +34,7 @@ int pop_error(unsigned int line_number)
 
 /**
  * short_stack_error - Prints momty math function error messages
- * 			for stacks/queues smaller than two nodes.
+ *		for stacks/queues smaller than two nodes.
  * @line_number: Line number in Monty bytcodes file where error occured.
  * @op: Operation where the error occured.
  *
@@ -56,13 +56,13 @@ int short_stack_error(unsigned int line_number, char *op)
 
 int div_error(unsigned int line_number)
 {
-	 fprintf(stderr, "L%u: division by zero\n", line_number);
-	 return (Exit_Failure);
+	fprintf(stderr, "L%u: division by zero\n", line_number);
+	return (Exit_Failure);
 }
 
 /**
  * pchar_error - Prints pchar error messeges for empty stacks
- * 		empty stacks and non-character values.
+ *		empty stacks and non-character values.
  * @line_number: Line number in Monty bytecodes file where error occured.
  * @message: The corresponding error message to print.
  *
@@ -72,5 +72,5 @@ int div_error(unsigned int line_number)
 int pchar_error(unsigned int line_number, char *message)
 {
 	fprintf(stderr, "L%u: can't pchar, %s\n", line_number, messages);
-        return (Exit_Failure);
+	return (Exit_Failure);
 }
